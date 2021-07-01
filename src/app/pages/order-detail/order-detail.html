@@ -1,0 +1,44 @@
+<div class="padding-top-common">
+    <app-header></app-header>
+    <app-order-detailed-view></app-order-detailed-view>
+    <div class="conatiner-fluid" style="margin-top: 10px;background-color: #F4F5F8;margin-top: 70px;">
+        <div class="row margin-lft-rt-0">
+            <div class="col-md-2">
+                <app-order-navbar></app-order-navbar>
+            </div>
+            <div class="col-md-10 order-detail-module-cotainer">
+                <div class="tab-content">
+                    <div class="ord-detail-overview" role="tabpanel" class="tab-pane fade in active order-tab-fade" id="overviewTab"
+                        aria-labelledby="overviewTab-tab">
+                        <app-order-overview></app-order-overview>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade order-tab-fade tab-background" id="submissionsTab"
+                        aria-labelledby="activityTab-tab">
+                        <div class="ord-detail-comp-container">
+                            <app-submissions></app-submissions>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade order-tab-fade tab-background" id="activityTab"
+                        aria-labelledby="activityTab-tab">
+                        <div class="ord-detail-comp-container">
+                            <app-activity-order-view></app-activity-order-view>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade order-tab-fade tab-background" id="messagesTab"
+                        aria-labelledby="messagesTab-tab">
+                        <div class="ord-detail-comp-container">
+                            <app-chat></app-chat>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade order-tab-fade tab-background" id="filesTab"
+                        aria-labelledby="filesTab-tab">
+                        <div class="ord-detail-comp-container">
+                            <app-files></app-files>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

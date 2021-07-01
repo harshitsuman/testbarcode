@@ -1,0 +1,35 @@
+<div style="position: absolute;top: 200px;left: 36%;" *ngIf="messages?.length === 0">
+        <div *ngIf="!hideEmptyMsg" class="empty-msg-holder text-center">
+            <div style="font-size: 85px;opacity:0.3;" class="fa fa-envelope empty-msg-icon"></div>
+            <div style="font-size: 27px;font-weight:bold;" class="empty-msg-heading">No messages, yet.</div>
+            <div style="font-size: 16px;" class="empty-msg-text">Looks like you have not initiated a conversation.</div>
+            <div class="messages-start-btn" (click)="startChat()">Start a Conversation</div>
+        </div>
+    </div>
+<div *ngFor="let message of messages">
+    <div class="message-container-me">
+        <div class="message-header">
+            <span class="message-name"><span class="message-image"></span>You</span>
+            <span class="pull-right message-time">{{message.created_at | date :'EE, MMMM d, y, hh:mm a'}}</span>
+        </div>
+        <div class="message-content">{{message.message}}</div>
+        <div *ngFor="let messages of message.fileLocation" class="message-file"><i class="fa fa-paperclip" style="padding-right:15px;"></i><a target="_blank" href="{{messages.Location}}">{{messages.key}}</a></div>
+    </div>
+</div>
+
+<!-- <div class="message-container-me">
+    <div class="message-header">
+        <span class="message-name"><span class="message-image"></span>You</span>
+        <span class="pull-right message-time">Jan. 11th at 11:00 PM</span>
+    </div>
+    <div class="message-content">Sure, I have already sent an email with the requested details. Please do reach me in case if you need any details.</div>
+    <div class="message-file"><i class="fa fa-paperclip" style="padding-right:15px;"></i>Abstractor Write-Up Sheet.pdf</div>
+</div> -->
+
+<!-- <div class="message-container-from">
+    <div class="message-header">
+        <span class="message-name"><span class="message-image"></span>Ryan Dunn</span>
+        <span class="pull-right message-time">Jan. 11th at 10:08 PM</span>
+    </div>
+    <div class="message-content">Additionally, while we need full deed copies, in regards to open mortgages, please only provide us with copies of pertinent pages (ie. first two to three pages of mortgage plus signature/ notary page). Again, call Ryan at 610-291-5012. I am a one man title owner and MUST keep costs down when possible. Thank you very much.</div>
+</div> -->

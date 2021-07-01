@@ -1,0 +1,14 @@
+<div class="order"  routerLink="/orderDetail/{{order._id}}" >    
+    <ul class="row">
+        <li class="col-md-1">{{order.client_order_no}}</li>
+        <li class="col-md-2"><span class="order-labels">Product</span>{{order?.product_name}}</li>
+        <!-- <li class="col-md-3"><span class="order-labels">status</span>{{order.status}}</li> -->
+        <li class="col-md-3"><span class="order-labels">Address</span>{{order.property?.address}}</li>
+        <li class="col-md-1"><span class="order-labels">Pricing</span>{{order.pricing | currency}}</li>
+        <li class="col-md-2"><span class="order-labels">Ordered On:</span>{{order.created_at | date: 'MM/dd/yyyy HH:mm a' : 'UTC'}}</li>
+        <li class="col-md-1"><span class="order-labels">Due Date:</span>{{order.due_by_date | date:'MM/dd/yy'}}</li>
+        <li class="col-md-2"><span class="order-labels">Comments:</span>{{order.comment}}</li>
+        <li *ngIf="hideStatusColumn" class="col-md-1"><span class="order-labels">Status:</span>{{order.status}}</li>
+        </ul>
+        <div class="order-status">{{order.status}}</div>
+</div>

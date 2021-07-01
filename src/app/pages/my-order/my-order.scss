@@ -1,0 +1,213 @@
+#my-order-page{
+    background-color: #F4F5F8;
+    // height: 75vh;
+    .my-activity{
+        background-color: #ffffff;
+        position: absolute;
+        right: 0px;
+        box-shadow: 0px 3px 3px lightgrey;
+        height: 79vh;
+        overflow-y: auto;
+    }
+}
+
+.my-order-container{
+    padding:30px 20px;
+}
+
+// order-sub-header css
+
+.sub-header-holder{
+    width: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    // box-shadow: 0px 3px 15px lightgrey;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.16);
+    padding: 15px 20px;
+    margin-bottom: 5px;
+}
+.sub-head-nav .nav > li > a:hover,.sub-head-nav .nav > li > a:active {
+    background: #F4F4F8;
+    cursor: pointer;
+    color: #61BCF2;
+    border-radius: 50px;
+    font-size: 14px;
+    padding: 6px 16px;
+}
+.sub-head-nav .nav > li.active > a{
+    background: #F4F4F8;
+    cursor: pointer;
+    color: #61BCF2;
+    border-radius: 50px;
+    font-size: 14px;
+    padding: 6px 16px;
+}
+.sub-head-nav > ul > li >a{
+    font-size: 14px;
+    color: #667378;
+    padding: 6px 16px;
+    font-weight: bold;
+}
+.order-active-tab{
+    background: #F4F4F8;
+    cursor: pointer;
+    color: #61BCF2 !important;
+    border-radius: 50px;
+    font-size: 14px;
+    padding: 6px 16px;
+}
+.sub-header-search{
+    font-size: 16px;
+    opacity: 0.7;
+    // cursor: pointer;
+    padding: 0 30px;
+}
+.sub-header-search-icon{
+    cursor: pointer;
+}
+.sub-head-tab {
+    width: 150px;
+    height: 47px;
+}
+.sub-head-tab .nav > li > a:active , .sub-head-tab .nav > li >:hover {
+    background: #a5a3a3;
+    border: 1px solid #bcbcbc;
+    cursor: pointer;
+}
+.sub-head-tab .nav > li{
+    margin-left: 0px;
+}
+.card-tab-border{
+    border-radius: 0px 6px 6px 0px;
+}
+.list-tab-border{
+    border-radius: 6px 0px 0px 6px;
+}
+.sub-head-tab .nav > li > a{
+    border: 1px solid #bcbcbc;
+    cursor: pointer;
+    border-left: none;
+}
+.sub-head-tab .nav > li.active > a{
+    background: #a5a3a3;
+    border: 1px solid #bcbcbc;
+    cursor: pointer;
+}
+.sub-header-button{
+    width: 115px;
+    height: 47px;
+    background: #A7A7A7;
+    border-radius: 6px;
+    color: #FFF;
+}
+.activity-count{
+    background: white;
+    font-size: 20px;
+    color: #7b7b7b;
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 3px;
+    border: 1px solid #707070;
+}
+.sub-header-actions{
+    position: absolute;
+    right: 25px;
+}
+.sub-header-menu{
+    background: #F4F5F8;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    opacity: 0.7;
+}
+
+.search-container {
+    background: white;
+    box-shadow: 0px 3px 6px lightgrey;
+    position: relative;
+    z-index: 9;
+}
+
+
+//search component
+
+.search-bar-input{
+    padding: 10px 50px;
+    font-size: 20px;
+    color: #A1A1A1;
+    border-radius: 30px;
+    width: 100%;
+    margin-bottom: 12px;
+    margin-top: 15px;
+    font-weight: bold;
+    background-color: #F4F5F8;
+    border:none;
+}
+.search-bar-input:focus{
+    outline:none;
+}
+.search-icon{
+    position: absolute;
+    top: 25px;
+    font-size: 20px;
+    color: #A1A1A1;
+    left: 20px;
+}
+.search-filters-container{
+    background: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 0;
+    box-shadow: 0px 3px 6px lightgrey;
+}
+.search-checkbox{
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+.search-checkbox-label{
+    font-size: 20px;
+    color: #7B7B7B;
+    margin-right: 35px;
+    margin-top: 8px;
+}
+.search-select{
+    font-size: 14px;
+    color: #00171F;
+    padding: 0px 15px;
+    background: #F4F5F8;
+    margin-right: 15px;
+    border: 1px solid #a1a1a138;
+    width: 250px;
+    height: 34px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+.search-close {
+    padding-left: 30px;
+    font-size: 26px;
+    color: #707070;
+    cursor: pointer;
+    position: absolute;
+    right: -40px;
+    font-weight: bold;
+    top: 18px;
+}
+.search-close:hover{
+    transform: scale(1.2);
+    transform-origin: 50% 50%;
+}
+.search-input-container{
+    width: 922px;
+    margin: auto;
+    position: relative;
+}

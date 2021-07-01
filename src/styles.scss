@@ -1,0 +1,530 @@
+html{
+    height: 100%;
+}
+body{
+    font-family: 'Nunito', sans-serif;
+    width: 100%;
+    overflow-x: hidden;
+    height: 100%;
+    background-color: #F4F5F8; 
+    // padding-top: 60px;
+}
+.padding-top-common{
+    padding-top: 60px;
+}
+.font18{
+    font-size: 18px;
+}
+.font20{
+    font-size: 20px;
+}
+.text-grey{
+    color: #707070;
+}
+.curPointer{
+    cursor: pointer;
+}
+.row-margin0{
+    margin-left: 0;
+    margin-right: 0;
+}
+.padding0{
+    padding:0px;
+}
+.margin-lft-rt-0{
+    margin-left: 0;
+    margin-right: 0
+}
+
+$color: #707070;
+
+.list-state{
+    .order{
+      overflow: hidden;
+      cursor: pointer;
+      .order-labels{
+          display: none;
+      }
+      .order-status{
+          display: none;
+      }
+      ul{
+          li{
+              float: left;
+            //   margin-right: 20px;
+              &:first-child{
+                //   width: 80px;
+              }
+          }
+      }
+    }
+    app-order:nth-child(odd) .order{
+        ul{
+            background: #f9f9f9;
+        }
+    }  
+  }
+  .card-state{
+      .order{
+          float: left;
+          background-color: #f2f2f2;
+          margin-right: 10px;
+          margin-bottom: 15px;
+          cursor: pointer;
+          border-radius: 6px;
+          ul{
+              padding-right: 20px;
+              padding-left: 30px;
+              padding-top: 30px;
+              li{ 
+                  &:first-child{
+                      font-size: 26px;
+                  }
+                  .order-labels{
+                      color: lighten($color, 20);
+                      margin-right: 5px;
+                  }
+              }
+          }
+      }
+  }
+
+//Login Page
+
+.login-img-container{
+    height: 100vh;
+    padding: 0;
+}
+.login-img{
+    background-image: url(/assets/Login-bg.png);
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.login-form-container{
+    background: white;
+    height: 100vh;
+    text-align: center;
+}
+.login-main-container{
+    height: 95vh;
+}
+.logo-container{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #66A6FF;
+    margin: auto;
+    // margin-top: 100px;
+    margin-bottom: 45px;
+    padding: 40px 0px;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0px 10px 60px #91d1f7;
+}
+.login-input{
+    background: #F4F5F8;
+    border-radius: 23px;
+    color: #00171F;
+    padding: 17px 20px;
+    border:none;
+    width: 100%;
+}
+.form-holder{
+    margin-top: 50%;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+}
+.input-icon{
+    position: absolute;
+    right: 20px;
+    top: 18px;
+    font-size: 16px;
+    color: #A1A1A1;
+}
+.login-input:focus{
+    outline:none;
+}
+.form-container{
+    padding-left: 44px;
+    padding-right: 44px;
+    padding-top: 20px;
+}
+.input-container{
+    position: relative;
+}
+.login-button{
+    background: #00A8E8 !important;
+    width: 100%;
+    padding: 12px !important;
+    font-size: 16px !important;
+}
+.login-fgp-text{
+    color: #00A8E8;
+    font-size: 12px;
+    padding-top: 8px;
+    margin-bottom: 35px;
+    float: right;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.ngx-datepicker-container .ngx-datepicker-calendar-container{
+    z-index: 9;
+}
+#datePicker .ngx-datepicker-container .ngx-datepicker-input {
+    padding: 5px 20px !important;
+    font-size: 14px !important;
+    color: #00171F;
+    outline: 0;
+    border: 1px solid #A1A1A1;
+    width: 280px !important;
+    height: 42px;
+    border-radius: 4px;
+
+}
+#datePicker.input-error .ngx-datepicker-container .ngx-datepicker-input{
+    border: none;
+}
+#batchDatePicker .ngx-datepicker-container .ngx-datepicker-input {
+    padding: 5px 20px !important;
+    font-size: 14px !important;
+    color: #00171F;
+    outline: 0;
+    border: 1px solid #A1A1A1;
+    width: 196px;
+    height: 42px;
+    border-radius: 4px;
+
+}
+#batchDatePicker.input-error .ngx-datepicker-container .ngx-datepicker-input{
+    border: none;
+}
+
+.ng2-tag-input.ng2-tag-input--focused {
+    border-bottom: none !important;
+    position: absolute !important;
+    top: 19px;
+    left: 15px;
+}
+#borrowertagInput .ng2-tag-input {
+    position: absolute !important;
+    top: 19px;
+    left: 15px;
+    height: 40px;
+    border-bottom: none;
+}
+#sellertagInput .ng2-tag-input {
+    position: absolute !important;
+    top: 19px;
+    left: 15px;
+    height: 40px;
+    border-bottom: none;
+}
+.ng2-tags-container tag {
+    top: 0;
+    background: #E2F6FE !important;
+    color: #00171F !important;
+    font-size: 12px !important;
+    border-radius: 0 !important;
+}
+#borrowertagInput input.ng2-tag-input__text-input {
+    height: 35px;
+}
+#borrowertagInput tag{
+    height: 28px;
+    line-height: 28px;
+    margin: .25rem .3rem .1rem 0;
+}
+#borrowertagInput delete-icon svg {
+    vertical-align: bottom;
+    height: 28px;
+}
+#sellertagInput input.ng2-tag-input__text-input {
+    height: 35px;
+}
+#sellertagInput tag{
+    height: 28px;
+    line-height: 28px;
+    margin: .25rem .3rem .1rem 0;
+}
+#sellertagInput delete-icon svg {
+    vertical-align: bottom;
+    height: 28px;
+}
+
+.heading-title-icon{
+    padding-right: 10px;
+    color: #007EA7;
+}
+.heading-title{
+    font-size: 22px;
+    color: #00171F;
+    display: block;
+    font-weight: bold;
+}
+.button-common{
+    border-radius: 36px;
+    background: #324857;
+    color: white !important;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 9px 20px;
+}
+.angle-icon{
+    padding-left: 5px;
+}
+.order-detail-heading{
+    font-size: 22px;
+    color: #00171F;
+    display: block;
+    margin-bottom: 20px;
+    font-weight: bold;
+    // padding-top: 20px;
+}
+
+.ngx-datepicker-calendar-container .ngx-datepicker-calendar-container.ngx-datepicker-calendar-container .main-calendar-container.ngx-datepicker-calendar-container .main-calendar-days.ngx-datepicker-calendar-container .day-unit.is-today.ngx-datepicker-calendar-container, .ngx-datepicker-calendar-container .ngx-datepicker-calendar-container.ngx-datepicker-calendar-container .main-calendar-container.ngx-datepicker-calendar-container .main-calendar-days.ngx-datepicker-calendar-container .day-unit.ngx-datepicker-calendar-container:hover, .ngx-datepicker-calendar-container .ngx-datepicker-calendar-container.ngx-datepicker-calendar-container .main-calendar-container.ngx-datepicker-calendar-container .main-calendar-days.ngx-datepicker-calendar-container .year-unit.is-today.ngx-datepicker-calendar-container, .ngx-datepicker-calendar-container .ngx-datepicker-calendar-container.ngx-datepicker-calendar-container .main-calendar-container.ngx-datepicker-calendar-container .main-calendar-days.ngx-datepicker-calendar-container .year-unit.ngx-datepicker-calendar-container:hover, .ngx-datepicker-calendar-container .ngx-datepicker-calendar-container.ngx-datepicker-calendar-container .main-calendar-container.ngx-datepicker-calendar-container .main-calendar-years.ngx-datepicker-calendar-container .day-unit.is-today.ngx-datepicker-calendar-container, .ngx-datepicker-calendar-container .ngx-datepicker-calendar-container.ngx-datepicker-calendar-container .main-calendar-container.ngx-datepicker-calendar-container .main-calendar-years.ngx-datepicker-calendar-container .day-unit.ngx-datepicker-calendar-container:hover, .ngx-datepicker-calendar-container .ngx-datepicker-calendar-container.ngx-datepicker-calendar-container .main-calendar-container.ngx-datepicker-calendar-container .main-calendar-years.ngx-datepicker-calendar-container .year-unit.is-today.ngx-datepicker-calendar-container, .ngx-datepicker-calendar-container .ngx-datepicker-calendar-container.ngx-datepicker-calendar-container .main-calendar-container.ngx-datepicker-calendar-container .main-calendar-years.ngx-datepicker-calendar-container .year-unit.ngx-datepicker-calendar-container:hover{
+    background: #62c6f0;
+    color: #fff !important;
+}
+.ngx-datepicker-container .ngx-datepicker-calendar-container .main-calendar-container .main-calendar-days .day-unit.is-disabled, .ngx-datepicker-container .ngx-datepicker-calendar-container .main-calendar-container .main-calendar-days .year-unit.is-disabled, .ngx-datepicker-container .ngx-datepicker-calendar-container .main-calendar-container .main-calendar-years .day-unit.is-disabled, .ngx-datepicker-container .ngx-datepicker-calendar-container .main-calendar-container .main-calendar-years .year-unit.is-disabled {
+    cursor: not-allowed;
+    color: white;
+}
+.ngx-datepicker-container .ngx-datepicker-calendar-container .main-calendar-container .main-calendar-days .day-unit.is-selected, .ngx-datepicker-container .ngx-datepicker-calendar-container .main-calendar-container .main-calendar-days .year-unit.is-selected, .ngx-datepicker-container .ngx-datepicker-calendar-container .main-calendar-container .main-calendar-years .day-unit.is-selected, .ngx-datepicker-container .ngx-datepicker-calendar-container .main-calendar-container .main-calendar-years .year-unit.is-selected
+.swal2-cancel swal2-styled{
+    color: #00171F;
+}
+.ngx-datepicker-container .ngx-datepicker-calendar-container .main-calendar-container .main-calendar-days .day-unit.is-today, .ngx-datepicker-container .ngx-datepicker-calendar-container .main-calendar-container .main-calendar-days .day-unit:hover, .ngx-datepicker-container .ngx-datepicker-calendar-container .main-calendar-container .main-calendar-days .year-unit.is-today, .ngx-datepicker-container .ngx-datepicker-calendar-container .main-calendar-container .main-calendar-days .year-unit:hover, .ngx-datepicker-container .ngx-datepicker-calendar-container .main-calendar-container .main-calendar-years .day-unit.is-today, .ngx-datepicker-container .ngx-datepicker-calendar-container .main-calendar-container .main-calendar-years .day-unit:hover, .ngx-datepicker-container .ngx-datepicker-calendar-container .main-calendar-container .main-calendar-years .year-unit.is-today, .ngx-datepicker-container .ngx-datepicker-calendar-container .main-calendar-container .main-calendar-years .year-unit:hover{
+    background: #a4a9b1;
+    color: #fff !important;
+}
+.btn:focus{
+    outline:none !important;
+}
+.c-btn.form-control {
+    border: none !important;
+    box-shadow: none !important;
+    height: 32px;
+}
+.selected-list .c-btn {
+    padding: 7px;
+}
+.dropdown-list{
+    width: 300px !important;
+    margin-top: 10px;
+}
+.dropdown-list ul li:hover {
+    background: #E2F6FE !important;
+}
+.list-filter {
+    border: 1px solid #a1a1a152;
+    position: relative;
+    padding-left: 35px;
+    height: 35px;
+    margin: 15px;
+}
+.pure-checkbox {
+    padding: 10px 10px;
+    cursor: pointer;
+    text-align: left;
+    margin: 5px 15px !important;
+}
+.pure-checkbox input[type="checkbox"] + label:before {
+    border: 2px solid #A1A1A1 !important;
+}
+.pure-checkbox input[type="checkbox"]:checked + label:before {
+    background: #00a8e8 !important;
+    border: 2px solid #007EA7 !important;
+}
+.selected-list .c-list {
+    overflow: hidden !important;
+}
+#formdatePicker .is-today{
+    color: white ;
+}
+.form-control::placeholder{
+    // color: #00171F;
+}
+input::placeholder{
+    // color: #00171F;
+}
+
+#searchSelect .c-btn{
+    background: #f4f4f8;
+    padding: 7px;
+}
+#searchSelectTwo .c-btn{
+    background: #f4f4f8;
+    padding: 7px;
+}
+#searchSelectThree .c-btn{
+    background: #f4f4f8;
+    padding: 7px;
+}
+#searchSelectFour .c-btn{
+    background: #f4f4f8;
+    padding: 7px;
+}
+
+// sweet alert css
+
+.swal2-popup .swal2-styled.swal2-cancel{
+    background-color: rgb(244, 245, 248) !important;
+    border-radius: 38px !important;
+    color: #324857 !important;
+    font-weight: bold !important;
+    font-size: 16px !important;
+}
+.swal2-popup .swal2-styled.swal2-confirm{
+    background-color: #00A8E8 !important;
+    border-radius: 38px !important;
+    color: #FFFFFF !important;
+    font-weight: bold !important;
+    font-size: 16px !important;
+}
+.swal2-popup .swal2-styled:focus{
+    box-shadow: none !important;
+}
+.swal2-popup .swal2-title{
+    font-size: 30px !important;
+    color: #00171F !important;
+    font-weight: 300 !important;
+}
+.swal2-popup .swal2-content{
+    font-size: 18px !important;
+    color: #DC3545 !important;
+    font-weight: normal !important; 
+}
+.swal2-popup .swal2-actions:not(.swal2-loading) .swal2-styled:active,.swal2-popup .swal2-actions:not(.swal2-loading) .swal2-styled:hover{
+    background-image: none !important;
+}
+.swal2-popup{
+    width: 452px !important;
+    height: 230px;
+    padding: 30px 30px 0px 0px !important;
+    box-shadow: 0px 3px 25px #5f5f61;
+}
+.swal2-icon{
+    display: none !important;
+}
+.swal2-popup .swal2-header {
+    display: flex;
+    flex-direction: initial !important;
+    align-items: center;
+}
+.swal2-popup .swal2-image {
+    max-width: 100%;
+    margin-right: 30px !important;
+    margin-left: 60px !important;
+}
+.swal2-popup #swal2-content {
+    padding-left: 148px;
+    position: absolute;
+    top: 110px;
+}
+.swal2-popup .swal2-actions{
+    margin: 0 !important;
+    justify-content: flex-end !important;
+    margin-top: 15px !important;
+}
+
+.pure-checkbox input[type="checkbox"] + label:before {
+    border-radius: 4px;
+}
+
+// Footer css
+.footer-container{
+    display: block !important;
+    background: #6C96A5;
+    /* height: 27px; */
+    position: fixed;
+    bottom: 0;
+    border-top: 1px solid #A1A1A1;
+    width: 100%;
+    padding: 10px;
+    margin-top: 30px;
+}
+.footer-sub-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.all-rights-text{
+    color: #F4F5F8;
+    font-size: 11px;
+}
+.footer-options{
+    font-size: 11px;
+    color: #FFFFFF;
+    margin-left: 23px;
+    justify-content: space-between;
+}
+.footer-options > span{
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+#FormMultiselectCounty .selected-list .c-btn {
+    padding: 11px ;
+}
+#FormMultiselectState .selected-list .c-btn {
+    padding: 11px ;
+}
+
+#FormMultiselectCounty .selected-list .c-angle-down, #FormMultiselectCounty .selected-list .c-angle-up {
+    top: 62%;
+}
+#FormMultiselectState .selected-list .c-angle-down,#FormMultiselectState .selected-list .c-angle-up{
+    top: 62%;
+}
+#batchDatePicker .main-calendar-days .day-unit:hover{
+    background: #00a8e8;
+    color: #fff;
+}
+#datePicker .main-calendar-days .day-unit:hover{
+    background: #00a8e8;
+    color: #fff;
+}
+#batchDatePicker .day-unit .is-today{
+    color: #fff !important;
+}
+
+.empty-msg-heading{
+    color: #A1A1A1;
+    padding-bottom: 5px;
+    padding-top: 20px;
+}
+.empty-msg-text{
+    color: #A1A1A1;
+}
+.empty-msg-icon{
+    font-size: 66px;
+    color: #A1A1A1;
+}
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: #F5F5F5;
+  }
+::-webkit-scrollbar-thumb {
+    background-color: #979696;
+    // border: 5px solid #555555;
+  }
+::-webkit-scrollbar-track {
+    // -webkit-box-shadow: inset 0 0 6px rgba(73, 73, 73, 0.1);
+      background-color: #F5F5F5; 
+  }
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  } 
+.ngx-pagination .current {
+    background: #00a8e8 !important;
+}
+
+.login-logo-img{
+    width: 140px;
+    height: 27px;
+}

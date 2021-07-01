@@ -1,0 +1,116 @@
+.order-detailed-view-header{
+    width: 100%;
+    box-shadow: 0px 3px 25px lightgrey;
+    padding: 10px 20px;
+    background: white;
+    position: fixed;
+    height: 65px;
+    z-index: 9;
+}
+.order-number-id{
+    font-size: 20px;
+    padding-right: 10px;
+    display: inline-block;
+    color: #324857;
+    font-weight: bold;
+}
+.order-status-badge{
+    background: #F4F5F8;
+    color: #000000;
+    padding: 8px 10px;
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: -3px;
+    border-radius: 4px;
+}
+.order-type{
+    color: #A1A1A1;
+    font-size: 13px;
+    font-weight: bold;
+    position: relative;
+}
+
+.dropdown-menu-holder{
+    margin-top: 15px;
+    padding: 16px 14px;
+    box-shadow: 0px 3px 6px lightgrey;
+    width: 196px;
+    border: none;
+    position: absolute;
+    top:19px;
+    right: 0px;
+    left: inherit;
+}
+.arrow-up-logout{
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid white;
+    position: absolute;
+    top: -6px;
+    right: 10%;
+}    
+.order-actions-button{
+    border-radius: 38px;
+    background: #324857;
+    font-size: 16px;
+    padding: 8px 25px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    right: 0px;
+    top: -26px;
+}
+.header-order-dropdown{
+    color: #00171F;
+    font-size: 14px;
+    display: block;
+    padding: 14px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.header-order-dropdown:hover{
+    color: #00171F;
+    font-size: 14px;
+    display: block;
+    padding: 14px 20px;
+    background: #E2F6FE;
+    border-radius: 6px;
+    text-decoration: none;
+}
+.msg-dropdown-send {
+    color: #007EA7;
+    font-size: 14px;
+    padding-right: 10px;
+}
+.msg-dropdown-cancel {
+    color: #DC3545;
+    font-size: 14px;
+    padding-right: 10px;
+    padding-left: 5px;
+}
+.msg-dropdown-reports {
+    color: #007EA7;
+    font-size: 14px;
+    padding-right: 10px;
+}
+.order-open{
+    background: #F4F5F8;
+    color: #00171F;
+}
+.order-submitted{
+    background: #FFC107;
+}
+.order-clarification{
+    background: #FFC107;
+}
+.order-completed{
+    background: #28A745
+}
+.order-cancelled{
+    background: #DC3545;
+}

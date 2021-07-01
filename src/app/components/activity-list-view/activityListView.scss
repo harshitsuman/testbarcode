@@ -1,0 +1,42 @@
+.activity-heading{
+    font-size: 22px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    display: block;
+    color: #404040;
+    text-align: center;
+    font-weight: bold;
+}
+.activity-nav{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+.activity-nav .nav > li > a{
+    font-size: 12px;
+    color: #031C25;
+    padding: 6px 12px;
+    font-weight: bold;
+}
+.activity-nav .nav > li > a:active , .activity-nav .nav > li >:hover {
+    background: #F4F4F8;
+    border-radius: 50px;
+    font-size: 12px;
+    cursor: pointer;
+    color: #61BCF2;
+    padding: 6px 12px;
+}
+.activity-nav .nav > li.active > a{
+    background: #F4F4F8;
+    border-radius: 50px;
+    font-size: 12px;
+    cursor: pointer;
+    color: #61BCF2;
+    padding: 6px 12px;
+}
+.activity-empty-msg-container{
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

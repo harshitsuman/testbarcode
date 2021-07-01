@@ -1,0 +1,44 @@
+.order-nav-container{
+    background: #FFF;
+    border: 1px solid #a1a1a138;
+    border-radius: 4px;
+    margin-top: 10px;
+    padding: 15px 14px;
+    position: fixed;
+    width: 14.6%;
+}
+.order-navbar > li {
+    width: 100%;
+    margin-bottom: 5px;
+}
+.order-navbar > li > a{
+    padding: 12px 15px;
+    font-size: 16px;
+    color: #324857;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+.order-navbar > li.active > a{
+    padding: 12px 15px;
+    font-size: 16px;
+    color: #007EA7;
+    background: #E2F6FE;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    
+}
+.order-navbar > li > a:hover{
+    padding: 12px 15px;
+    font-size: 16px;
+    color: #007EA7;
+    background: #E2F6FE;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.order-navbar-icon{
+    padding-right: 10px;
+    font-size: 19px;
+}

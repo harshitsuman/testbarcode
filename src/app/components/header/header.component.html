@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand navbar-dark navbar-holder">
+    <a class="navbar-brand header-logo">
+        <img class="login-logo-img" src="/assets/CloseVille-logo.svg">
+    </a>
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#homeNavbar" aria-controls="homeNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" id="homeNavbar"></span>
+    </button> -->
+    <div class="header-menu-items-holder">
+        <ul class="navbar-nav nav-menu">
+            <li class="nav-item list-item-none disabled">
+                <a class="nav-link nav-item-name">Dashboard</a>
+            </li>
+            <li class="nav-item list-item-none active">
+                <a class="nav-link nav-item-name" (click)="refresh()">My Product</a>
+            </li>
+            <li class="nav-item list-item-none">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle header-dropdown nav-item-name" type="button"
+                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Create Product <i class="fa fa-angle-down angle-icon"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-holder" aria-labelledby="dropdownMenuButton">
+                        <div class="arrow-up"></div>
+                        <a class="dropdown-item header-order-dropdown" routerLink="/createOrder"><i
+                                class="fa fa-list-alt dropdown-icon"></i>Single Product</a>
+                        <!-- <a class="dropdown-item header-order-dropdown" routerLink="/createBatchOrder"><i
+                                class="fa fa-newspaper-o dropdown-icon"></i>Batch Order</a> -->
+                        <a class="dropdown-item header-order-dropdown" routerLink="/createBarcode" title="Generate Barcode">
+                            <i class="fa fa-barcode dropdown-icon"></i>Barcode</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="header-profile-holder pull-right">
+        <div class="header-noti-icon">
+            <i id="noti" class="fa fa-bell" (click)="toggleNotification()"></i>
+            <span class="noti-count">0</span>
+            <div *ngIf="showNotification">
+                <app-notifications (clickEvent)="showNotification=false"></app-notifications>
+            </div>
+        </div>
+        <div class="header-user-image">
+            <img src="/assets/img_avatar.png" class="home-nav-avatar-img">
+        </div>
+        <div style="display:inline-block" type="button" id="userLogoutDropdown" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <span class="header-username">{{clientName}}<i class="fa fa-angle-down angle-icon"></i>
+            </span>
+            <span class="header-post">Client</span>
+        </div>
+            <div class="dropdown-menu dropdown-logout-holder" aria-labelledby="userLogoutDropdown">
+                    <div class="arrow-up-logout"></div>
+              <a class="dropdown-item header-order-dropdown" ><i class="fa fa-cog dropdown-icon"></i>Settings</a>
+              <a class="dropdown-item header-order-dropdown" (click)="logOut()"><i class="fa fa-power-off dropdown-icon"></i>Logout</a>
+            </div>
+    </div>
+</nav>

@@ -1,0 +1,81 @@
+<div class="container-fluid">
+    <div class="row login-main-container">
+        <div class="col-md-3 login-form-container">
+            <div class="form-holder">
+                <div class="login-logo-container">
+                    <!-- <span>Logo</span> -->
+                    <img class="login-logo-img" src="/assets/CloseVille-logo.svg">
+                </div>
+                <div *ngIf="loginState==='login'" class="form-container">
+                    <form #appLoginForm="ngForm" (ngSubmit)=onSubmit(appLoginForm)>
+                        <div class="input-container" style="padding-bottom: 30px;">
+                            <input name="login_username" #login_username="ngModel" ngModel class="login-input" placeholder="Username" type="username" autocomplete="off">
+                            <span for="Username" class="fas fa-user input-icon"></span>
+                        </div>
+                        <div class="input-container">
+                            <input name="login_password" #login_password="ngModel" ngModel class="login-input" placeholder="Password" type="password" autocomplete="off">
+                            <span for="Username" class="fas fa-lock input-icon"></span>
+                        </div>
+                        <div class="login-fgp-text" (click)="changeLoginState('forgotPassword')">Forgot Password ?</div>
+                        <button class="btn button-common login-button" type="submit">Login</button>
+                    </form>
+                    <!-- <div class="goto-login-btn"><span style="cursor: pointer;" data-toggle="modal" data-target="#resetPasswordModal"
+                            (click)="changeModalState('resetPwdModal')">First Time Login</span></div> -->
+                </div>
+
+                <div *ngIf="loginState==='forgotPassword'" class="forgot-password-email">
+                    <div class="forgot-pwd-heading">Forgot Password?</div>
+                    <div class="forgot-pwd-text-desc">Enter your email address below and we will send you an email with
+                        a password reset link.</div>
+                    <form>
+                        <div class="input-container" style="padding-bottom: 15px;">
+                            <input class="login-input" placeholder="Email" type="email" autocomplete="off">
+                            <span for="email" class="fas fa-envelope input-icon"></span>
+                        </div>
+                        <button class="btn button-common login-button" (click)="changeLoginState('emailSentMsg')">Request
+                            Reset Link</button>
+                    </form>
+                    <div class="goto-login-btn"><span (click)="changeLoginState('login')" style="cursor: pointer;"><i
+                                class="fas fa-arrow-left"></i>Back to Login</span></div>
+                </div>
+
+                <div *ngIf="loginState==='emailSentMsg'" class="forgot-password-email">
+                    <div class="pwd-email-sent-desc">We have sent you an email with password reset link. Please check
+                        your email inbox.</div>
+                    <div class="goto-login-btn"><span (click)="changeLoginState('login')" style="cursor: pointer;"><i
+                                class="fas fa-arrow-left"></i>Back to Login</span></div>
+                    <div class="goto-login-btn"><span (click)="changeLoginState('resetPassword')" style="cursor: pointer;margin-top: 100px;
+                        display: block;">Go
+                            to Reset Password Screen</span></div>
+                </div>
+
+                <div *ngIf="loginState==='resetPassword'" class="form-container">
+                    <div class="forgot-pwd-heading">Reset Password</div>
+                    <div class="forgot-pwd-text-desc">Enter your new password</div>
+                    <form>
+                        <div class="input-container" style="padding-bottom: 15px;">
+                            <input class="login-input" placeholder="New password" type="text" autocomplete="off">
+                            <span for="email" class="fas fa-lock input-icon"></span>
+                        </div>
+                        <div class="input-container" style="padding-bottom: 15px;">
+                            <input class="login-input" placeholder="Verify password" type="text" autocomplete="off">
+                            <span for="email" class="fas fa-lock input-icon"></span>
+                        </div>
+                        <button class="btn button-common login-button" (click)="changeLoginState('reset-success-msg')">Reset</button>
+                    </form>
+                </div>
+
+                <div *ngIf="loginState==='reset-success-msg'" class="forgot-password-email">
+                    <div class="pwd-email-sent-desc">You have successfully reset your password. Please login.</div>
+                    <div class="goto-login-btn"><span (click)="changeLoginState('login')" style="cursor: pointer;"><i
+                                class="fas fa-arrow-left"></i>Back to Login</span></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-9 login-img-container">
+            <div class="login-img">
+            </div>
+        </div>
+    </div>
+</div>

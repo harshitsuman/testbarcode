@@ -1,0 +1,73 @@
+<div class="padding-top-common">
+    <app-header (searchEvent)="refresh($event)"></app-header>
+    <!-- <div class="sub-header-holder" *ngIf="!isSearchVisible">
+        <div class="sub-head-nav">
+            <ul class="nav nav-pills">
+                <li class="nav-item" (click)="isOrderTabActive = 'Open'">
+                    <a class="nav-link" [ngClass]="{'order-active-tab':isOrderTabActive === 'Open'}" (click)="openOrdersTab('Open')">Open({{statusCount.Open?statusCount.Open:0}})</a>
+                </li>
+                <li class="nav-item" (click)="isOrderTabActive = 'Submitted'">
+                    <a class="nav-link" [ngClass]="{'order-active-tab':isOrderTabActive === 'Submitted'}" (click)="openOrdersTab('Submitted')">Submitted({{statusCount.AdminSubmitted?statusCount.AdminSubmitted:0}})</a>
+                </li>
+                <li class="nav-item" (click)="isOrderTabActive = 'Clarification'">
+                    <a class="nav-link" [ngClass]="{'order-active-tab':isOrderTabActive  === 'Clarification'}" (click)="openOrdersTab('Clarification')">Clarification({{statusCount.clarification?statusCount.clarification:0}})</a>
+                </li>
+                <li class="nav-item" (click)="isOrderTabActive = 'Completed'">
+                    <a class="nav-link" [ngClass]="{'order-active-tab':isOrderTabActive  === 'Completed'}" (click)="openOrdersTab('Completed')">Completed({{statusCount.completed?statusCount.completed:0}})</a>
+                </li>
+                <li class="nav-item" (click)="isOrderTabActive = 'Cancelled'">
+                    <a class="nav-link" [ngClass]="{'order-active-tab':isOrderTabActive  === 'Cancelled'}" (click)="openOrdersTab('Cancelled')">Cancelled({{statusCount.cancelled?statusCount.cancelled:0}})</a>
+                </li>
+            </ul>
+        </div>
+        <div class="sub-header-actions">
+            <span class="sub-header-search"><i class="fa fa-search sub-header-search-icon" (click)="showSearch($event)"></i></span>
+            <span class="sub-header-menu" (click)="toggleActivity($event)"><i class="fa fa-list" ></i></span>
+        </div>
+    </div> -->
+    <div class="order-search-container" *ngIf="search">
+        <!-- <app-search></app-search> -->
+        <div class="search-container">
+            <form>
+                <div class=" text-center">
+                    <div class="search-input-container">
+                        <span><i class="fa fa-search search-icon"></i></span>
+                        <input class="search-bar-input" placeholder="Find Orders">
+                        <span class="search-close" (click)="showSearch($event)">X</span>
+                    </div>
+                </div>
+                <div class="search-filters-container text-center">
+                    <div class="search-select">
+                        <angular2-multiselect id="searchSelect" name="orderType" [data]="orderTypeList"(onSelect)="selectedOrderType(selectedOrderTypeItems)"(onDeSelect)="selectedOrderType(selectedOrderTypeItems)" [(ngModel)]="selectedOrderTypeItems"
+                            [settings]="settings">
+                        </angular2-multiselect>
+                    </div>
+                    <div class="search-select">
+                        <angular2-multiselect id="searchSelectTwo" name="statusType" [data]="statusList" (onSelect)="openOrdersTab(selectedStatusItems)"(onDeSelect)="openOrdersTab(selectedStatusItems)"[(ngModel)]="selectedStatusItems"
+                            [settings]="settings2">
+                        </angular2-multiselect>
+                    </div>
+                    <div class="search-select">
+                            <angular2-multiselect id="searchSelectThree" name="county" [data]="county_name_list"(onSelect)="countySelection(selectedCountyList)"(onDeSelect)="countySelection(selectedCountyList)" [(ngModel)]="selectedCountyList"
+                            [settings]="settings3"></angular2-multiselect>
+                    </div>
+                    <div class="search-select">
+                        <angular2-multiselect id="searchSelectFour" name="state" [data]="stateList" (onSelect)="stateSelection(selectedStateList)"(onDeSelect)="stateSelection(selectedStateList)"[(ngModel)]="selectedStateList"
+                            [settings]="settings4"></angular2-multiselect>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div id="my-order-page" class="row">
+            <div [ngClass]="{'col-md-9': true, 'my-order-container': true}" [@orderListViewOpenClose]="showActivity? 'full': 'compressed'">
+                <order-list-view [orderStatusFilter]="status" [orderType]="types" [searchEvent]="search"[county]="county" [state]="state"[viewState]="listViewState"></order-list-view>
+            </div>
+            <!-- <div [ngClass]="{'col-md-3 my-activity': true}" [@activityOpenClose]="showActivity? 'open': 'closed'" style="padding: 0 15px;">
+                <app-activity-list-view></app-activity-list-view>
+            </div> -->
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

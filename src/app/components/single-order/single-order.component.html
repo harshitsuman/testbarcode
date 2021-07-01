@@ -1,0 +1,50 @@
+<div class="single-order-holder">
+  <span class="heading-title"><i class="fa fa-list-alt heading-title-icon"></i>Create New Product</span>
+  <form (ngSubmit)="onSubmit(createOrderForm)" #createOrderForm="ngForm" novalidate autocomplete="off">
+    <div class=" input-holder">
+      <div style="width: auto;">
+        <div class="input-label-hover">
+          <input ngModel name="brand_name" #brand_name="ngModel" [ngClass]="{'form-control':true, 'input-error':createOrderForm.submitted && brand_name.errors?.required}"
+            placeholder="eg." required>
+          <label class="input-label">Brand Name</label>
+        </div>
+        <div class="error-division">
+          <div class="invalid-feedback">
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <div style="width: auto;">
+        <div class="input-label-hover">
+          <input ngModel name="product_name" #product_name="ngModel" [ngClass]="{'form-control':true, 'input-error':createOrderForm.submitted && product_name.errors?.required}"
+            placeholder="eg." required>
+          <label class="input-label">Product Name</label>
+        </div>
+        <div class="error-division">
+          <div class="invalid-feedback">
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <div style="width: auto;">
+        <div class="input-label-hover">
+          <input ngModel name="product_price" #product_price="ngModel" [ngClass]="{'form-control':true, 'input-error':createOrderForm.submitted && product_price.errors?.required}"
+            placeholder="eg." required>
+          <label class="input-label">Product Price</label>
+        </div>
+        <div class="error-division">
+          <div class="invalid-feedback">
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="single-order-footer">
+      <button [disabled]="showLoader" class="btn btn-secondary form-create-order-btn" type="submit" aria-expanded="false">
+        Create Product
+      </button>
+      <button type="reset" class="form-footer-actions curPointer" style="margin: 0 10px;" (click)="onReset(createOrderForm)">Reset</button>
+      <button routerLink="/myOrder" class="form-footer-actions curPointer">Cancel</button>
+    </div>
+  </form>
+</div>

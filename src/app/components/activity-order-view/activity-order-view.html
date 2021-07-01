@@ -1,0 +1,36 @@
+<span class="order-detail-heading">Activity</span>
+
+<!-- <div *ngIf="(orderActData.today).length"> -->
+<div *ngIf="today">
+    <div class="activity-day">Today</div>
+    <div *ngFor="let orderActivityData of orderActData.today">
+        <div class="activity-item ">
+            <span class="far fa-thumbs-up activity-image"></span>
+            <span class="activity-description">{{orderActivityData?.descripition}}</span>
+            <span class="activity-ref-number">{{orderActivityData?.client_order_no? orderActivityData.client_order_no : orderActivityData.nb_order_ref}}</span>
+            <span class="activity-time pull-right">{{orderActivityData?.created_at | date:'EE, MMMM d, y hh:mm'}}</span>
+        </div>
+    </div>
+</div>
+<div *ngIf="yesterday">
+    <div class="activity-day">Yesterday</div>
+    <div *ngFor="let orderActivityData of orderActData.yesterday">
+        <div class="activity-item ">
+            <span class="far fa-thumbs-up activity-image"></span>
+            <span class="activity-description">{{orderActivityData?.descripition}}</span>
+            <span class="activity-ref-number">{{orderActivityData?.client_order_no? orderActivityData.client_order_no : orderActivityData.nb_order_ref}}</span>
+            <span class="activity-time pull-right">{{orderActivityData?.created_at | date:'EE, MMMM d, y hh:mm'}}</span>
+        </div>
+    </div>
+</div>
+<div *ngIf="rest">
+    <div class="activity-day">Older</div>
+    <div *ngFor="let orderActivityData of orderActData.rest">
+        <div class="activity-item ">
+            <span class="far fa-thumbs-up activity-image"></span>
+            <span class="activity-description">{{orderActivityData?.descripition}}</span>
+            <span class="activity-ref-number">{{orderActivityData?.client_order_no? orderActivityData.client_order_no : orderActivityData.nb_order_ref}}</span>
+            <span class="activity-time pull-right">{{orderActivityData?.created_at | date:'EE, MMMM d, y hh:mm'}}</span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="chat-console-container">
+    <form #createChatForm="ngForm" (keydown.enter)=onSubmit(createChatForm) (ngSubmit)=onSubmit(createChatForm)>
+        <div style="position:relative;">
+            <textarea [(ngModel)]="defaultChatValue" name="chatInput" class="chat-input-textarea form-control" rows="2"
+                placeholder="Write your message.." required></textarea>
+            <span><button class="btn chat-submit-btn" type="submit"><i class="fa fa-paper-plane chat-console-send "></i></button>
+            </span>
+            <label><i class="fas fa-paperclip chat-console-attach"><input class="chat-file-upload" #chatFileUpload type="file"
+                        (change)="uploadFile(chatFileUpload)"></i></label>
+        </div>
+        <div *ngIf="showLoader"><i class="fa fa-circle-o-notch fa-spin fa-2x"></i></div>
+        <!-- <div class="message-file"><i class="fa fa-file" style="padding-right:15px;"></i>Abstractor Write-Up Sheet.pdf<i class="fa fa-times" style="padding-left:15px;"></i></div> -->
+        <div  *ngFor="let fileDetail of fileDetails, index as i " class="uploaded-file-container">
+                <span class="message-file"><a href="{{fileDetail.Location}}" target="_blank">{{fileDetail.key.split('?',1)}}</a><i
+                    (click)=fileDetails.splice(i,1) class="fa fa-times curPointer" style="padding-left:10px;"></i></span>
+        </div>
+    </form>
+</div>

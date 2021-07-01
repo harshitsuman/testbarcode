@@ -1,0 +1,38 @@
+<div class="container-fluid">
+    <div class="row first-login-img-container">
+        <div class="img-background">
+            <div class="first-login-img">
+            </div>
+        </div>
+        
+        <div class="first-time-reset-pwd reset-pwd-modal-dialog" >
+            <div *ngIf="modalState==='resetPwdModal'" class="resetpwd-modal-form">
+                <div class="forgot-pwd-heading-modal">Welcome </div>
+                <div class="forgot-pwd-text-desc-modal">We have activated your account. For
+                    security reason we request you to change the password to continue using the
+                    platform.</div>
+                <form #resetPasswordLinkForm="ngForm" (ngSubmit)=onSubmit(resetPasswordLinkForm)>
+                    <div class="input-container" style="padding-bottom: 15px;">
+                        <input name="new_password" ngModel #new_password="ngModel" class="login-input" placeholder="New password"
+                            type="text" autocomplete="off">
+                        <span for="email" class="fas fa-lock input-icon"></span>
+                    </div>
+                    <div class="input-container" style="padding-bottom: 15px;">
+                        <input name="verify_password" ngModel #verify_password="ngModel" class="login-input"
+                            placeholder="Verify password" type="text" autocomplete="off">
+                        <span for="email" class="fas fa-lock input-icon"></span>
+                    </div>
+                    <button class="btn button-common login-button" type="submit">Reset</button>
+                </form>
+            </div>
+            <div *ngIf="modalState==='resetPwdSuccessModal'" class="pwd-changed-modal">
+                <div class="pwd-reset-success-icon"><i class="far fa-thumbs-up"></i></div>
+                <div class="pwd-reset-success-desc">You have successfully changed your
+                    password. Please login again.</div>
+                <div class="goto-login-btn"><span routerLink="/login" style="cursor: pointer;"><i class="fas fa-arrow-left"></i>Back
+                        to Login</span></div>
+            </div>
+        </div>
+    </div>
+
+</div>

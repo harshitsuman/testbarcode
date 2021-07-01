@@ -1,0 +1,9 @@
+<div class="chat-container">
+    <span class="order-detail-heading">Messages</span>
+    <div class="msg-main-conatainer">
+        <app-messages ></app-messages>
+    </div>
+    <div class="chat-console-container">
+        <app-chat-console (messageEvent)="receiveMessage($event,$event)"></app-chat-console>
+    </div>
+</div>

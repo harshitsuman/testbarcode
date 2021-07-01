@@ -1,0 +1,81 @@
+.reset-pwd-modal-dialog{
+    width: 360px;
+    margin: 250px 39%;
+    position: absolute;
+    background: white;
+    box-shadow: 0px 10px 20px #525151;
+    z-index: 9;
+    border-radius: 4px;
+}
+.resetpwd-modal-form{
+    padding: 44px;
+}
+.forgot-pwd-heading-modal{
+    font-size: 20px;
+    color: #324857;
+    text-align: center;
+}
+.forgot-pwd-text-desc-modal{
+    font-size: 14px;
+    color: #A1A1A1;
+    padding-bottom: 16px;
+    padding-top: 7px;
+    text-align: center;
+    border-radius: 4px;
+}
+.first-login-img-container{
+    height: 100vh;
+    padding: 0;
+    position: relative;
+}
+.first-login-img::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    opacity: 0.2;
+    background-image: url(/assets/Login-bg.png);
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img-background::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+}
+.pwd-reset-success-desc{
+    font-size: 18px;
+    color: #324857;
+    text-align: center;
+}
+.pwd-reset-success-icon{
+    text-align: center;
+    font-size: 60px;
+    color: #28A745;
+    opacity: 0.5;
+}
+.pwd-changed-modal{
+    padding: 73px 37px 147px 37px;
+}
+.goto-login-btn{
+    padding-top: 20px;
+    font-size: 12px;
+    color: #00A8E8;
+    text-align: center;
+}
+.goto-login-btn i{
+    padding-right: 7px;
+}
+.resetPassword{
+
+}

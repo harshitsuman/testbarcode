@@ -1,0 +1,56 @@
+<div class="files-container">
+    <ul class="nav files-nav">
+        <li class="nav-item active" role="tab" data-toggle="tab" href="#myFilesTab" aria-controls="myFilesTab"
+            aria-selected="true">
+            <a class="nav-link">My Files</a>
+        </li>
+        <li class="nav-item" role="tab" data-toggle="tab" href="#receivedFilesTab" aria-controls="receivedFilesTab"
+            aria-selected="true">
+            <a class="nav-link ">Received Files</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="ord-detail-overview" role="tabpanel" class="tab-pane fade in active order-tab-fade" id="myFilesTab"
+            aria-labelledby="myFilesTab-tab">
+            <div *ngIf="orderFiles.fileLocation?.length === 0" class="empty-msg-Noti">
+                <div class="text-center">
+                    <div style="font-size: 66px;opacity:0.3;" class="far fa-file empty-msg-icon"></div>
+                    <div style="font-size: 22px;font-weight:bold;" class="empty-msg-heading">No Files</div>
+                    <div style="font-size: 14px; width:200px;" class="empty-msg-text">We’ll let you know when we’ve got
+                        something new for you.</div>
+                </div>
+            </div>
+            <!-- To display a file  -->
+            <!-- <div *ngFor="let files of orderFiles,index as i" class="files-holder">
+                <div class="files-item">
+                    <div style="display:inline-block"><i class="far fa-file-alt file-icon"></i></div>
+                    <div style="display:inline-block" class="file-detail">
+                        <span class="file-name"><a href="{{files.Location}}" target="_blank">{{files.key.split('?',1)}}</a></span>
+                        <i class="fa fa-times file-delete-icon" (click)="deleteFile(i)"></i>
+                        <span class="file-date">{{orderCreatedAt | date}}</span>
+                    </div>
+                </div>
+            </div> -->
+            <div class="file-upload-container">
+                <label *ngIf="!showLoader" type="button" class="btn button-common files-upload-btn"><input class="files-upload-input" #filesUploadAction type="file"
+                        (change)="uploadFiles(filesUploadAction)"><i class="fas fa-file-upload file-upload-icon">
+                    </i>Choose File</label>
+                    <div *ngIf="showLoader"><i class="fa fa-circle-o-notch fa-spin fa-2x"></i></div>
+            </div>
+        </div>
+        <div class="ord-detail-overview" role="tabpanel" class="tab-pane fade order-tab-fade" id="receivedFilesTab"
+            aria-labelledby="receivedFilesTab-tab">
+            <div class="empty-msg-Noti">
+                <div class="text-center">
+                    <div style="font-size: 66px;opacity:0.3;" class="far fa-file empty-msg-icon"></div>
+                    <div style="font-size: 22px;font-weight:bold;" class="empty-msg-heading">No Files</div>
+                    <div style="font-size: 14px; width:200px;" class="empty-msg-text">We’ll let you know when we’ve got
+                        something new for you.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

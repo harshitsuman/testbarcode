@@ -1,0 +1,28 @@
+.chat-heading{
+    font-size: 22px;
+    color: #00171F;
+    padding-right: 20px;
+    font-weight: bold;
+}
+.chat-button{
+    font-size: 21px;
+    color: #FFF;
+    background: #A5A3A3;
+    border-radius: 35px;
+    padding: 5px 20px;
+}
+.chat-container {
+    background: #FFF;
+    // min-height: 100vh;
+}
+.chat-console-container{
+    margin-top: 30px;
+}
+.msg-main-conatainer{
+    display: flex;
+    flex-flow: column-reverse;
+    flex-direction: column-reverse;
+    overflow-y: auto;
+    height: 500px;
+    align-items: flex-end;
+}

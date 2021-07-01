@@ -1,0 +1,45 @@
+.feeback-form-container{
+    background: #FFF;
+    width: 650px;
+    padding: 30px;
+}
+.feedback-form-label{
+    font-size: 16px;
+    color: #324857;
+    font-weight: bold;
+}
+.form-container{
+    padding-top: 35px;
+}
+.feedback-form-item{
+    padding-bottom: 18px;
+}
+.feedback-textarea{
+    resize: none;
+    font-size: 14px;
+    color: #324857;
+}
+.form-create-order-btn{
+    border-radius: 38px;
+    background: #00A8E8;
+    font-size: 16px;
+    padding: 8px 20px;
+    color: white;
+    font-weight: bold;
+}
+.form-footer-actions{
+    font-size: 16px;
+    color: #324857;
+    background: #F4F5F8;
+    padding: 10px 22px;
+    border-radius: 38px;
+    border: none;
+}
+.single-order-footer {
+    padding-top: 50px;
+    text-align: right;
+    padding-bottom: 5px;
+}
+.form-footer-actions:focus{
+    outline:none;
+}

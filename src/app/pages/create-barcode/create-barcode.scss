@@ -1,0 +1,13 @@
+.create-order-container{
+    background: #F4F5F8;
+    padding: 28px 25%;
+    margin-bottom: 30px;
+}
+@media print {
+  #printPageButton, .heading-title {
+    display: none !important;
+  }
+  .create-order-container{
+    padding: 0px 15% 0px 15%;
+  }
+}

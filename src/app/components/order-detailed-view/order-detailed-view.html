@@ -1,0 +1,21 @@
+<div class="order-detailed-view-header">
+    <div>
+        <span class="order-number-id"><i class="fa fa-list-alt heading-title-icon"></i>Order {{orderData?.client_order_no}}</span>
+        <span class="badge badge-secondary order-status-badge" [ngClass]="{'order-open':orderStatus==='Open','order-submitted':orderStatus==='Submitted','order-clarification':orderStatus==='Clarification','order-completed':orderStatus==='Completed','order-cancelled':orderStatus==='Cancelled'}">
+            <p *ngIf="orderStatus === 'AdminSubmitted'">Submitted</p>
+            <p *ngIf="orderStatus !== 'AdminSubmitted'">{{orderStatus}}</p>
+         </span>
+    </div>
+    <div class="order-type">{{defaultOrderTypes[orderData?.order_type]}}
+        <button class="btn order-actions-button dropdown-toggle" type="button" id="orderdropdown" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Actions<i class="fa fa-angle-down angle-icon" style="color:#e8e8e8;"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-holder" aria-labelledby="orderdropdown">
+                <div class="arrow-up-logout"></div>
+            <a class="dropdown-item header-order-dropdown" role="tab" data-toggle="tab" href="#messagesTab"><i class="fa fa-paper-plane msg-dropdown-send"></i>Send Message</a>
+            <a type="button" class="dropdown-item header-order-dropdown" role="tab" data-toggle="tab" (click)="downloadReport()"><i class="fa fa-download msg-dropdown-reports"></i>Report</a>
+            <a class="dropdown-item header-order-dropdown" *ngIf="orderData?.status === 'Open'"style="color:#DC3545" (click)="cancelOrder()"><i class="fa fa-times msg-dropdown-cancel" ></i>Cancel Order</a>
+        </div>
+    </div>
+</div>

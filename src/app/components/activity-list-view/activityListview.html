@@ -1,0 +1,53 @@
+<div class="activityHolder">
+    <span class="activity-heading"><i class="fa fa-list heading-title-icon"></i>Activity({{actTotalCount}})</span>
+    <div class="activity-nav">
+        <ul class="nav nav-pills">
+            <li class="nav-item active" role="tab" data-toggle="tab" href="#allActivityTab">
+                <a class="nav-link">All({{actTotalCount}})</a>
+            </li>
+            <li class="nav-item" role="tab" data-toggle="tab" href="#actionableTab">
+                <a class="nav-link">Actionable(0)</a>
+            </li>
+            <li class="nav-item" role="tab" data-toggle="tab" href="#orderingTab">
+                <a class="nav-link">Ordering({{actTotalCount}})</a>
+            </li>
+            <li class="nav-item" role="tab" data-toggle="tab" href="#messagesTab">
+                <a class="nav-link">Messages(0)</a>
+            </li>
+        </ul>
+    </div>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane fade in active order-tab-fade" id="allActivityTab">
+            <app-activity></app-activity>
+        </div>
+        <div role="tabpanel" class="tab-pane fade order-tab-fade" id="actionableTab">
+                <div class="activity-empty-msg-container">
+                        <div class="empty-msg-holder text-center">
+                                <div style="font-size:66px;color: #A1A1A1;opacity:0.3" class="fas fa-list empty-msg-icon"></div>
+                                <div style="font-size:22px;font-weight: bold;" class="empty-msg-heading">No Activity</div>
+                                <div style="font-size:14px;" class="empty-msg-text">We’ll let you know when we’ve got something new for you.</div>
+                            </div>
+                </div>
+                
+        </div>
+        <div role="tabpanel" class="tab-pane fade order-tab-fade" id="orderingTab">
+                <!-- <div class="activity-empty-msg-container">
+                        <div class="empty-msg-holder text-center">
+                                <div style="font-size:66px;color: #A1A1A1;opacity:0.3" class="fas fa-list empty-msg-icon"></div>
+                                <div style="font-size:22px;font-weight: bold;" class="empty-msg-heading">No Activity</div>
+                                <div style="font-size:14px;" class="empty-msg-text">We’ll let you know when we’ve got something new for you.</div>
+                            </div>
+                </div> -->
+                <app-activity></app-activity>
+        </div>
+        <div role="tabpanel" class="tab-pane fade order-tab-fade" id="messagesTab">
+                <div class="activity-empty-msg-container">
+                <div class="empty-msg-holder text-center">
+                        <div style="font-size:66px;color: #A1A1A1;opacity:0.3" class="fas fa-list empty-msg-icon"></div>
+                        <div style="font-size:22px;font-weight: bold;" class="empty-msg-heading">No Activity</div>
+                        <div style="font-size:14px;" class="empty-msg-text">We’ll let you know when we’ve got something new for you.</div>
+                    </div>
+                    </div>
+        </div>
+    </div>
+</div>

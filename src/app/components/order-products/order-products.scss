@@ -1,0 +1,31 @@
+.products-container{
+    border: 1px solid #A1A1A1;
+    border-radius: 4px;
+    padding: 28px 26px;
+}
+.product-item{
+    width: 47%;
+    display: inline-block;
+    border-radius: 4px;
+    background: #F4F5F8;
+    margin: 10px;
+    padding: 2px 2px 8px 10px;
+    cursor: pointer;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+.product-item:hover{
+    background: #E2F6FE;
+}
+.product-name{
+    font-size: 16px;
+    color: #324857;
+    font-weight: bold;
+}
+.product-description{
+    font-size: 12px;
+    color: #A1A1A1;
+    text-overflow: ellipsis;
+    height: 50px;
+    overflow: hidden;
+}

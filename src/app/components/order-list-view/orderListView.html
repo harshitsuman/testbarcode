@@ -1,0 +1,33 @@
+<div [ngClass]="{'list-state':viewState === 'list', 'card-state':viewState === 'card'}">
+    <div class="order-listView-heading">
+        <span class="heading-title" *ngIf="!search"><i class="fa fa-list-alt heading-title-icon"></i>{{status}}
+            Orders</span>
+        <span class="heading-title" *ngIf="search"><i class="fa fa-list-alt heading-title-icon"></i>Search Orders</span>
+        <span class="order-heading-pagination">Currently showing 1-{{orders?.length}} of {{orders?.length}}
+            orders</span>
+    </div>
+    <div class="orders-background">
+        <div *ngIf="orders?.length > 0" class="order-holder-headings container-fluid">
+            <ul class="order-headings-holder row">
+                <li class="col-md-1" (click)="sort('client_order_no')">Order ID<i [ngClass]="{'fa':true, 'fa-angle-down':!sortvalue,'fa-angle-up':sortValue }"></i></li>
+                <li class="col-md-2" (click)="sort('order_type')">Product<i [ngClass]="{'fa':true, 'fa-angle-down':!sortvalue,'fa-angle-up':sortValue }"></i></li>
+                <li class="col-md-3" (click)="sort('property')">Property Address<i [ngClass]="{'fa':true, 'fa-angle-down':!sortvalue,'fa-angle-up':sortValue }"></i></li>
+                <li class="col-md-1" (click)="sort('pricing')">Pricing<i [ngClass]="{'fa':true, 'fa-angle-down':!sortvalue,'fa-angle-up':sortValue }"></i></li>
+                <li class="col-md-2" (click)="sort('created_at')">Ordered On<i [ngClass]="{'fa':true, 'fa-angle-down':!sortvalue,'fa-angle-up':sortValue }"></i></li>
+                <li class="col-md-1" (click)="sort('due_by_date')">Due By<i [ngClass]="{'fa':true, 'fa-angle-down':!sortvalue,'fa-angle-up':sortValue }"></i></li>
+                <li class="col-md-2" >Comments</li>
+                <li class="col-md-1" *ngIf="search">Status</li>
+            </ul>
+        </div>
+        <app-order *ngFor="let order of orders | paginate : {itemsPerPage:15,currentPage:p}" [order]=order>
+        </app-order>
+        <pagination-controls class="order-pagination-bar" (pageChange)="p = $event"></pagination-controls>
+        <div *ngIf="orders?.length === 0" class="empty-msg-container">
+            <div class="empty-msg-holder text-center">
+                <div style="font-size:120px;color: #A1A1A1;opacity:0.3" class="far fa-list-alt empty-msg-icon"></div>
+                <div style="font-size:27px;font-weight: bold;" class="empty-msg-heading">No Orders yet</div>
+                <div style="font-size:16px;" class="empty-msg-text">We can’t find any {{status}} orders in this list</div>
+            </div>
+        </div>
+    </div>
+</div>

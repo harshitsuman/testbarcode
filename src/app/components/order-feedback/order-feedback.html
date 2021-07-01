@@ -1,0 +1,39 @@
+<div class="padding-top-common">
+    <div class="feeback-form-container">
+        <div class="heading-title" style="padding-bottom:35px;"><i class="fa fa-newspaper-o heading-title-icon"></i>Feedback on Order #{{orderData?.client_order_no}}</div>
+        <form (ngSubmit)="onSubmit(orderFeedbackForm)" #orderFeedbackForm="ngForm" class="">
+            <div class="feedback-form-item">
+                <label class="feedback-form-label">1. Vesting Error</label>
+                <textarea name="VestingError" #VestingError="ngModel" ngModel class="form-control feedback-textarea" placeholder="Write your comments here..."></textarea>
+            </div> 
+            <div class="feedback-form-item">
+                <label class="feedback-form-label">2. Missing Documents</label>
+                <textarea name="MissingDocuments"  #MissingDocuments="ngModel" ngModel class="form-control feedback-textarea" placeholder="Write your comments here..."></textarea>
+            </div>
+            <div class="feedback-form-item">
+                <label class="feedback-form-label">3. Typographical Error</label>
+                <textarea name="TypographicalError" #TypographicalError="ngModel" ngModel class="form-control feedback-textarea" placeholder="Write your comments here..."></textarea>
+            </div>
+            <div class="feedback-form-item">
+                <label class="feedback-form-label">4. Missing Requirements</label>
+                <textarea name="MissingRequirements" #MissingRequirements="ngModel" ngModel class="form-control feedback-textarea" placeholder="Write your comments here..."></textarea>
+            </div>
+            <div class="feedback-form-item">
+                <label class="feedback-form-label">5. Missing Exceptions</label>
+                <textarea name="MissingExceptions" #MissingExceptions="ngModel" ngModel class="form-control feedback-textarea" placeholder="Write your comments here..."></textarea>
+            </div>
+            <div class="feedback-form-item">
+                <label class="feedback-form-label">6. Additional Comments</label>
+                <textarea name="AdditionalComments" #AdditionalComments="ngModel" ngModel class="form-control feedback-textarea" placeholder="Write your comments here..."></textarea>
+            </div>  
+            <div class="single-order-footer">
+                <button class="btn form-create-order-btn" type="submit"
+                    aria-expanded="false">
+                    Submit Feedback
+                </button>
+                <button type="reset" class="form-footer-actions curPointer" style="margin: 0 10px;" (click)="onReset(orderFeedbackForm)">Reset</button>
+                <button routerLink='/orderDetail/{{orderID}}' class="form-footer-actions curPointer">Cancel</button>
+            </div> 
+        </form>
+    </div>
+</div>

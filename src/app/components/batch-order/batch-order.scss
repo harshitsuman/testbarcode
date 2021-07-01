@@ -1,0 +1,177 @@
+.template-container{
+    padding: 9px 17px;
+    background-color: #E2F6FE;
+    border-radius: 4px;
+    margin-top: 25px;
+}
+.attachment-style{
+    background: #F4F5F8;
+    padding: 9px 20px;
+    border-radius: 38px;
+    font-size: 14px;
+    color: #00A8E8;
+    display: inline-block;
+    margin-left: 118px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.batch-upload-text{
+    font-size: 14px;
+    color: #324857;
+    float: left;
+    width: 240px;
+}
+.batch-order-container {
+    width: 650px;
+    padding: 26px 30px;
+    background: #FFF;
+}
+.batch-form {
+    padding-top: 30px;
+    color: #707070;
+    font-size: 20px;
+}
+.batch-date-icon{
+    position: absolute;
+    right: 17px;
+    top: 12px;
+    font-size: 16px;
+    color: #324857;
+}
+.batch-select{
+    width: 550px;
+    margin-right: 30px;
+    height: 60px;
+    padding: 0 15px;
+    background: white;
+    border: 1px solid #707070;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+.batch-input{
+    position: relative;
+    height: 42px;
+    // padding: 0 15px;
+    background: white;
+    // border: 1px solid #A1A1A1;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 196px;
+    margin-bottom: 40px;
+}
+.single-order-footer{
+    text-align: right;
+    width: 100%;
+    padding-top: 55px;
+}
+.batch-textarea{
+    resize: none;
+    height: auto;
+    // margin-bottom: 35px;
+    border: 1px solid #A1A1A1;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 12px 15px;
+}
+.batch-upload-file-text{
+    color: #A1A1A1;
+    font-size: 12px;
+    padding-left: 10px;
+    font-weight: 300;
+    font-style: italic;
+}
+.form-create-order-btn{
+    border-radius: 38px;
+    background: #00A8E8;
+    font-size: 16px;
+    padding: 8px 20px;
+    color: white;
+    font-weight: bold;
+}
+.form-footer-actions{
+    font-size: 16px;
+    color: #324857;
+    background: #F4F5F8;
+    padding: 10px 22px;
+    border-radius: 38px;
+    border: none;
+}
+.form-footer-actions:focus{
+    outline:none;
+}
+.batch-upload-file{
+    font-size: 14px;
+    color: #00171F;
+    background: #F4F5F8;
+    padding: 6px 15px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.uploaded-file-close{
+    padding-left: 10px;
+}
+
+.input-label{
+    font-size: 12px;
+    color: #00171F;
+    margin-bottom: 0;
+    transition: all 0.2s;
+    transform-origin: left bottom; 
+    transform: translate(15px, 32px) scale(1.1);
+    touch-action: manipulation;
+    pointer-events: none;
+    font-weight: normal;
+}
+input{
+    touch-action: manipulation;
+}
+input:focus + .input-label, input:not(:placeholder-shown) + .input-label{
+    transform: translate(0, 0) scale(1);
+    font-weight: bold;
+}
+.input-label-hover{
+    display: flex;
+    flex-direction: column-reverse;
+}
+::-webkit-input-placeholder {
+    opacity: 0;
+    transition: inherit;
+  }
+input:focus::-webkit-input-placeholder {
+    opacity: 1;
+}
+textarea{
+    touch-action: manipulation;
+}
+textarea:focus + .input-label, textarea:not(:placeholder-shown) + .input-label{
+    transform: translate(0, 0) scale(1);
+    font-weight: bold;
+}
+textarea:focus::-webkit-input-placeholder {
+    opacity: 1;
+}
+.datepicker + .input-label{
+    transform: translate(0, 0) scale(1);
+    font-weight: bold;
+}
+.batch-input-textarea{
+    margin: 15px 0 33px 0;
+    position: relative;
+}
+.single-order-file-upload{
+    display: none;
+}
+input:disabled{
+    cursor: not-allowed;
+}
+.attached-file{
+    background: #F4F5F8;
+    padding: 6px 15px;
+    border-radius: 4px;
+    color: #00171F;
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 14px;
+}

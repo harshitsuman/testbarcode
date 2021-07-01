@@ -1,0 +1,54 @@
+<div class="notifications-container">
+    <div class="arrow-up-noti"></div>
+    <div class="notifications-heading"><i class="fa fa-bell noti-header-icon"></i>Notifications</div>
+    <div *ngIf="showEmptyMsg">
+            <div class="empty-msg-Noti text-center">
+                    <div style="font-size: 66px;opacity:0.3;" class="far fa-bell empty-msg-icon"></div>
+                    <div style="font-size: 22px;font-weight:bold;" class="empty-msg-heading">No notifications</div>
+                    <div style="font-size: 14px;" class="empty-msg-text">We’ll let you know when we’ve got something new for you.</div>
+                </div>
+    </div>
+
+    <div *ngIf="!showEmptyMsg">
+        <div class="notifications-item ">
+            <div class="notification-content">
+                <span class="fa fa-thumbs-up notifications-image"></span>
+                <span class="notifications-description">NobleServe has accepted order #NBL-2018-16400</span>
+            </div>
+            <span class="notifications-time pull-right">03:30 PM</span>
+        </div>
+        <div class="notifications-item ">
+            <div class="notification-content">
+                <span class="fa fa-envelope notifications-image"></span>
+                <span class="notifications-description">Samuel John has messaged you</span>
+            </div>
+            <span class="notifications-time pull-right">03:30 PM</span>
+        </div>
+        <div class="notifications-item ">
+            <div class="notification-content">
+                <span class="fa fa-list-alt notifications-image"></span>
+                <span class="notifications-description">You've received an order for a Title Search in Hale AL due by
+                    January...</span>
+            </div>
+            <span class="notifications-time pull-right">03:30 PM</span>
+        </div>
+        <div class="notifications-item ">
+            <div class="notification-content">
+                <span class="fa fa-list-alt notifications-image"></span>
+                <span class="notifications-description">You've received an order for a Title Search in Hale AL due by
+                    January...</span>
+            </div>
+            <span class="notifications-time pull-right">03:30 PM</span>
+        </div>
+        <div class="notifications-item ">
+            <div class="notification-content">
+                <span class="fa fa-envelope notifications-image"></span>
+                <span class="notifications-description">Samuel John has messaged you</span>
+            </div>
+            <span class="notifications-time pull-right">03:30 PM</span>
+        </div>
+        <div class="notifications-viewAll" (click)="hideNotifications()">Clear All</div>
+    </div>
+
+
+</div>

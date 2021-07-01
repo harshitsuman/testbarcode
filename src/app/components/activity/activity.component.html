@@ -1,0 +1,72 @@
+<!-- <div *ngIf="actData.today.length === 0" class="activity-empty-msg-container">
+    <div class="empty-msg-holder text-center">
+            <div style="font-size:66px;color: #A1A1A1;opacity:0.3" class="fas fa-list empty-msg-icon"></div>
+            <div style="font-size:22px;font-weight: bold;" class="empty-msg-heading">No Activity</div>
+            <div style="font-size:14px;" class="empty-msg-text">We’ll let you know when we’ve got something new for you.</div>
+        </div>
+</div>
+<div *ngIf="(actData?.today).length">
+        <div class="activity-day">Today</div>
+    <div *ngFor="let activity of actData.today">
+        <div class="activity-item" routerLink="/orderDetail/{{activity.order_id}}">
+            <span class="far fa-thumbs-up activity-image "></span>
+            <span class="activity-description">{{activity.descripition}}</span>
+            <span class="activity-desc-two">{{activity.client_order_no? activity.client_order_no:activity.nb_order_ref}}</span>
+            <span class="activity-time pull-right">{{activity.created_at | date:'shortTime'}}</span>
+        </div>
+    </div>
+</div>
+<div *ngIf="(actData.yesterday).length">
+        <div class="activity-day" style="padding-top:20px;">Yesterday</div>
+    <div *ngFor="let activity of actData.yesterday">
+        <div class="activity-item" routerLink="/orderDetail/{{activity.order_id}}">
+            <span class="far fa-thumbs-up activity-image "></span>
+            <span class="activity-description">{{activity.descripition}}</span>
+            <span class="activity-desc-two">{{activity.client_order_no? activity.client_order_no:activity.nb_order_ref}}</span>
+            <span class="activity-time pull-right">{{activity.created_at | date:'shortTime'}}</span>
+        </div>
+    </div>
+</div> -->
+<!-- <div *ngIf="(actData?.rest).length"> -->
+    <!-- <div *ngFor="let activity of actData.rest"> -->
+            <!-- <div class="activity-day" style="padding-top:20px;">Older</div>
+            <div *ngFor="let activity of actData.rest">
+        <div class="activity-item" routerLink="/orderDetail/{{activity.order_id}}">
+            <span class="far fa-thumbs-up activity-image "></span>
+            <span class="activity-description">{{activity.descripition}}</span>
+            <span class="activity-desc-two">{{activity.client_order_no? activity.client_order_no:activity.nb_order_ref}}</span>
+            <span class="activity-time pull-right">{{activity.created_at | date:'EE, MMMM d, y hh:mm'}}</span>
+        </div>
+    </div>
+</div> -->
+
+<!-- <div class="activity-day">Today</div> -->
+
+
+<!-- <div class="activity-item ">
+    <span class="fa fa-envelope activity-image"></span>
+    <span class="activity-description">Samuel John has messaged you</span>
+    <span class="activity-desc-two">Hello,will give you a call</span> 
+    <span class="activity-time pull-right">03:30 PM</span>
+</div>
+<div class="activity-day">Yesterday</div>
+<div class="activity-item ">
+    <span class="fa fa-envelope activity-image"></span>
+    <span class="activity-description">Samuel John has messaged you</span>
+    <span class="activity-desc-two">Hello,will give you a call</span> 
+    <span class="activity-time pull-right">03:30 PM</span>
+</div>
+<div class="activity-day">20-Jan-2019</div>
+<div class="activity-item ">
+    <span class="fa fa-envelope activity-image"></span>
+    <span class="activity-description">Samuel John has messaged you</span>
+    <span class="activity-desc-two">Hello,will give you a call</span> 
+    <span class="activity-time pull-right">03:30 PM</span>
+</div>
+<div class="activity-day">02-Jan-2019</div>
+<div class="activity-item ">
+    <span class="fa fa-envelope activity-image"></span>
+    <span class="activity-description">Samuel John has messaged you</span>
+    <span class="activity-desc-two">Hello,will give you a call</span> 
+    <span class="activity-time pull-right">03:30 PM</span>
+</div> -->

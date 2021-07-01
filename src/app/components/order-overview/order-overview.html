@@ -1,0 +1,86 @@
+<div class="overview-container">
+    <span class="order-detail-heading">Overview</span> <span *ngIf="orderOverview.status === 'Open'" class="move-submitted-temp"><a (click)="updateStatus()">Move to submitted</a></span>
+    <div *ngIf="orderOverview.status === 'Submitted'" class="overview-feedback-alertbox">
+        <span class="overview-feedback-msg">This order was submitted by the agent, please take an action.</span>
+        <div class="pull-right">
+            <button class="btn button-common order-overview-button" (click)="updateStatusToCompleted($event)"><i class="fa fa-check-circle overview-btn-icon"></i>Accept
+                Order</button>
+            <button class="btn button-common overview-feedback-button" routerLink="/orderFeedback/{{orderOverview._id}}"><i class="fab fa-wpforms overview-btn-icon"></i>Provide
+                Feedback</button>
+        </div>
+    </div>
+    <div class="overview-row">
+        <div class="overview-components">
+            <span class="overview-titles"><i class="fa fa-home overview-icon"></i>Property Address</span>
+            <div class="overview-info-item ">
+                <span class="info-label">Property Address:</span><span class="overview-info">{{orderOverview.property?.address}}</span>
+            </div>
+            <div class="overview-info-item">
+                <span class="info-label">County:</span><span class="overview-info">{{orderOverview.property?.county}}</span>
+            </div>
+            <div class="overview-info-item ">
+                <span class="info-label">State:</span><span class="overview-info">{{orderOverview.property?.state}}</span>
+            </div>
+            <div class="overview-info-item">
+                <span class="info-label">Parcel ID:</span><span class="overview-info">{{orderOverview.parcel_ids}}</span>
+            </div>
+        </div>
+        <div class="overview-components">
+            <span class="overview-titles"><i class="fa fa-info-circle overview-icon"></i>Additional Information</span>
+            <div class="overview-info-item ">
+                <span class="info-label">Purpose:</span><span class="overview-info">{{orderOverview.purpose}}</span>
+            </div>
+            <div class="overview-info-item">
+                <!-- <span class="info-label">Borrowers:</span><span class="overview-info">{{flattenNames(orderOverview.borrower_names)}}</span> -->
+                <span class="info-label">Borrowers:</span><span class="overview-info">{{orderOverview.borrower_names}}</span>
+            </div>
+            <div class="overview-info-item" *ngIf="orderOverview.seller_names">
+                <!-- <span class="info-label">Sellers:</span><span class="overview-info">{{flattenNames(orderOverview.seller_names)}}</span> -->
+                <span class="info-label">Sellers:</span><span class="overview-info">{{orderOverview.seller_names}}</span>
+            </div>
+            <div class="overview-info-item " *ngIf="orderOverview.purchase_amount">
+                <span class="info-label">Purchase Price:</span><span class="overview-info">{{orderOverview.purchase_amount | currency}}</span>
+            </div>
+            <div class="overview-info-item ">
+                <span class="info-label">Loan Amount:</span><span class="overview-info">{{orderOverview.loan_amount | currency}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="overview-row">
+        <div class="overview-components">
+            <span class="overview-titles"><i class="fa fa-list-alt overview-icon"></i>Order Details</span>
+            <div class="overview-info-item ">
+                <span class="info-label">Order Received Date:</span><span class="overview-info">{{orderOverview.created_at
+                    | date:'EE, MMMM d, y'}}</span>
+            </div>
+            <div class="overview-info-item">
+                <span class="info-label">Due Date:</span><span class="overview-info">{{orderOverview.due_by_date |
+                    date:'EE, MMMM d, y'}}</span>
+            </div>
+            <div *ngIf="orderOverview.close_by_date" class="overview-info-item ">
+                <span class="info-label">Projected Close Date:</span><span class="overview-info">{{orderOverview.close_by_date
+                    | date:'EE, MMMM d, y'}}</span>
+            </div>
+            <div class="overview-info-item">
+                <span class="info-label">Product Description:</span><span id="overviewProdDesc" class="overview-info" tooltip="{{orderOverview.product_description}}" placement="top" trigger="hover" theme="light">{{orderOverview.product_description}}</span>
+            </div>
+        </div>
+        <div class="overview-components">
+            <span class="overview-titles"><i class="fa fa-envelope overview-icon"></i>Messages</span>
+            <div *ngIf="messages.length === 0">
+                <div class="empty-msg-holder text-center" style="padding-top:30px;">
+                    <div class="fa fa-envelope empty-msg-icon"></div>
+                    <div style="font-size: 22px;font-weight: bold;" class="empty-msg-heading">No Messages</div>
+                    <div class="empty-msg-text">We’ll let you know when we’ve got something new for you.</div>
+                </div>
+            </div>
+            <div *ngFor = "let message of messages | slice:0:3;">
+                <div class="overview-message-item">
+                    <div class="overview-msg-desc"><strong>Message from Samuel John - </strong>{{message.message}}</div>
+                    <div class="overview-msg-time">{{message.created_at | date:'EE, MMMM d, y'}}</div>
+                </div>
+            </div>
+            <div *ngIf="messages.length > 3" class="text-center" href="#messagesTab" role="tab" data-toggle="tab"><button class="btn overview-msg-btn" >View All</button></div>
+        </div>
+    </div>
+</div>

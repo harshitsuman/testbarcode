@@ -1,0 +1,55 @@
+<div class="batch-order-container">
+    <span class="heading-title"><i class="fa fa-newspaper-o heading-title-icon"></i>Create New Batch Order</span>
+    <div class="template-container">
+        <span class="batch-upload-text">Please use the excel template to create the batch order</span>
+        <span class="attachment-style"><i class="fa fa-file" style="padding-right:15px;font-size: 14px;"></i>Download
+            Template</span>
+    </div>
+    <div class="batch-form">
+        <form (ngSubmit)=onSubmit(batchOrderForm) #batchOrderForm="ngForm">
+            <div class="batch-input">
+                <!-- <input class="batch-input form-control" placeholder="Expected Due Date"><i class="fa fa-calendar batch-date-icon"></i> -->
+                <div class="input-label-hover">
+                    <ng-datepicker id="batchDatePicker" #expected_due_date="ngModel" placeholder="eg." [options]="options"
+                        name="expected_due_date" ngModel (click)="handlerDatepicker()" [ngClass]="{'input-error':batchOrderForm.submitted && projectedCloseDateError, 'datepicker':projectedCloseDate}"><i class="fas fa-calendar-alt batch-date-icon"></i></ng-datepicker>
+                    <label class="input-label">Expected Due Date</label>
+                </div>
+            </div>
+            <div class="batch-input-textarea">
+                <div class="input-label-hover">
+                    <!-- <label class="input-label" Description></label> -->
+                    <textarea class="batch-textarea form-control" #batchDescription="ngModel" ngModel name="batchDescription" rows="3" placeholder="eg."></textarea>
+                    <label class="input-label">Description</label>
+                </div>
+            </div>
+            <div class="attach-file">
+                <div style="display:inline-block" *ngIf="!showLoader">
+                  <label class="btn btn-secondary button-common" type="button" aria-expanded="false"><input [disabled]="fileDetails.length === 1"
+                      #batchOrderFileUpload class="single-order-file-upload" type="file" (change)=uploadFile(batchOrderFileUpload)>
+                    Upload File
+                  </label>
+                  <!-- <loader ngIf="showLoader"></loader> -->
+                </div>
+                <div *ngIf="showLoader"><i class="fa fa-circle-o-notch fa-spin fa-2x"></i></div>
+                <span class="batch-upload-file-text">Maximum one file allowed, only Excel or CSV files</span>
+                <div class="uploaded-file-container" *ngFor="let file of fileDetails,let i=index">
+                  <span class="attached-file"><a href="{{file.Location}}" target="_blank">{{file.key.split('?',1)}}</a><i
+                      (click)=removeFile(i) class="fa fa-times curPointer" style="padding-left:10px;"></i></span>
+                </div>
+              </div>
+            <!-- <button class="btn button-common" type="button" aria-expanded="false">
+                Upload File
+            </button> -->
+            <!-- <div>
+                <span class="batch-upload-file">Abstractor Write-up Sheet.pdf<i class="fa fa-times uploaded-file-close"></i></span>
+            </div> -->
+            <div class="single-order-footer">
+                <button class="btn form-create-order-btn" type="submit" aria-expanded="false">
+                    Create Order
+                </button>
+                <button type="reset" class="form-footer-actions curPointer" style="margin: 0 10px;" (click)="onReset(batchOrderForm)">Reset</button>
+                <button routerLink="/myOrder" class="form-footer-actions curPointer">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>

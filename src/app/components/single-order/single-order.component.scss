@@ -1,0 +1,253 @@
+.single-order-holder{
+    background: white;
+    padding: 26px 30px;
+    width: 648px;
+}
+.input-holder{
+    margin: 15px 0;
+    position: relative;
+}
+.form-control{
+    // color: #00171F;
+    font-size: 14px;
+    padding: 12px 15px;
+    border: 1px solid #A1A1A1;
+    height: 42px;
+}
+.form-control-state {
+    color: #00171F;
+    font-size: 14px;
+    padding: 4px 10px;
+    border: 1px solid #A1A1A1;
+    height: 42px;
+}
+#FormMultiselectState .c-btn.form-control
+ {
+    border: none;
+    box-shadow: none;
+}
+
+#borrowertagInput{
+    height: 72px;
+}
+#sellertagInput{
+    height: 72px;
+}
+
+.form-text-area{
+    height: auto;
+    resize: none;
+}
+.attachment-style{
+    background: #F4F5F8;
+    padding: 10px 15px;
+    border-radius: 4px;
+    color: #00171F;
+}
+.single-order-footer{
+    text-align: right;
+    width: 100%;
+    padding-top: 25px;
+}
+.parcelIdlabel{
+    position: absolute;
+    right: 145px;
+    bottom: -20px;
+    color: #707070;
+    font-size: 14px;
+}
+.batch-date-icon{
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    font-size: 16px;
+    color:#324857;
+}
+.placeholder-datepicker {
+    position: absolute;
+    left: 20px;
+    top: 18px;
+    font-size: 20px;
+    color: #707070;
+    opacity: 0.7;
+}
+.hide-order-products{
+    display: none !important;
+}
+.input-label{
+    font-size: 12px;
+    color: #00171F;
+    margin-bottom: 0;
+    transition: all 0.2s;
+    transform-origin: left bottom; 
+    transform: translate(15px, 32px) scale(1.1);
+    touch-action: manipulation;
+    pointer-events: none;
+    font-weight: normal;
+}
+input{
+    touch-action: manipulation;
+}
+input:focus + .input-label, input:not(:placeholder-shown) + .input-label{
+    transform: translate(0, 0) scale(1);
+    font-weight: bold;
+}
+.input-label-hover{
+    display: flex;
+    flex-direction: column-reverse;
+}
+::-webkit-input-placeholder {
+    opacity: 0;
+    transition: inherit;
+  }
+input:focus::-webkit-input-placeholder {
+    opacity: 1;
+}
+textarea{
+    touch-action: manipulation;
+}
+textarea:focus + .input-label, textarea:not(:placeholder-shown) + .input-label{
+    transform: translate(0, 0) scale(1);
+    font-weight: bold;
+}
+textarea:focus::-webkit-input-placeholder {
+    opacity: 1;
+}
+
+.multiselect + .input-label{
+    transform: translate(0, 0) scale(1);
+    font-weight: bold;
+}
+.datepicker + .input-label{
+    transform: translate(0, 0) scale(1);
+    font-weight: bold;
+}
+.tag-input + .input-label{
+    transform: translate(0, 0) scale(1);
+    font-weight: bold;
+}
+
+
+.borrower-name-tag{
+    position: absolute;
+    left: 15px;
+    top: 32px;
+    background: #E2F6FE;
+    color: #00171F;
+    padding: 2px 10px;
+    font-size: 12px;
+}
+.form-attachment-text{
+    font-size: 16px;
+    font-weight: bold;
+    color: #00171F;
+    padding-bottom: 12px;
+    padding-top: 16px;
+    display: block;
+}
+.attach-file{
+    padding-bottom: 12px;
+}
+.form-create-order-btn{
+    border-radius: 38px;
+    background: #00A8E8;
+    font-size: 16px;
+    padding: 8px 20px;
+    color: white;
+    font-weight: bold;
+}
+.form-footer-actions{
+    font-size: 16px;
+    color: #324857;
+    background: #F4F5F8;
+    padding: 10px 22px;
+    border-radius: 38px;
+    border: none;
+}
+.form-footer-actions:focus{ 
+    outline:none;
+}
+.single-order-file-upload {
+    display: none;
+}
+.uploaded-file-container{
+    margin: 30px 10px;
+    display: inline-block;
+}
+.invalid-feedback {
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    display: none;
+}
+.error-division{
+    // height: 20px;
+    position: relative;
+    display: none;
+}
+.order-products-dropdown{
+    width: 588px;
+}
+.input-tag-label {
+    margin-bottom: 0;
+}
+
+.input-error  {
+    border: 1px solid #dc3545;
+    border-radius: 4px;
+    // padding-right: 2.25rem;
+    background-repeat: no-repeat;
+    background-position: center right calc(2.25rem / 4);
+    background-size: calc(2.25rem / 2) calc(2.25rem / 2);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23dc354…%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E");
+}
+.order-products-dropdown{
+    position: relative;
+}
+.order-products-container{
+    position: absolute;
+    background: white;
+    z-index: 10;
+}
+.form-control[readonly], fieldset[disabled] .form-control {
+    background-color: #FFF;
+    opacity: 1;
+}
+.type-angle-down{
+    position: absolute;
+    right: 195px;
+    bottom: 7px;
+    font-size: 30px;
+    opacity: 0.6;
+}
+.input-tooltip-icon{
+    position: absolute;
+    top:0;
+    right:10px;
+    cursor: help;
+}
+.label-multiselect{
+    transform: translate( 15px, 28px );
+}
+.label-hover-multiselect{
+    height: 32px;
+}
+#productType::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: wheat;
+    display: block;
+    top: 0;
+    left: 0;
+
+}
+.enable-purchase-amt{
+    background: red;
+}
+
+.required-field::before {
+    content: "*";
+    color: red;
+  }

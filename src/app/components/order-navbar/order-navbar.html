@@ -1,0 +1,19 @@
+<div class="order-nav-container">
+  <ul class="nav nav-pills order-navbar">
+          <li class="nav-item active" role="tab" data-toggle="tab" href="#overviewTab" aria-controls="overviewTab" aria-selected="true">
+            <a class="nav-link" ><i class="order-navbar-icon fa fa-pie-chart"></i>Overview</a>
+          </li>
+          <li *ngIf="orderOverview.status==='Submitted' || orderOverview.status==='Completed'" class="nav-item" role="tab" data-toggle="tab" href="#submissionsTab" aria-controls="activityTab" aria-selected="true">
+            <a class="nav-link" ><i class="order-navbar-icon fa fa-check-circle"></i>Submissions</a>
+          </li>
+          <li class="nav-item" role="tab" data-toggle="tab" href="#activityTab" aria-controls="activityTab" aria-selected="true">
+            <a class="nav-link" ><i class="order-navbar-icon fa fa-list"></i>Activity</a>
+          </li>
+          <li class="nav-item " role="tab" data-toggle="tab" href="#messagesTab" aria-controls="messagesTab" aria-selected="true">
+            <a class="nav-link" ><i class="order-navbar-icon fa fa-envelope"></i>Messages</a>
+          </li>
+          <li class="nav-item" role="tab" data-toggle="tab" href="#filesTab" aria-controls="filesTab" aria-selected="true">
+            <a class="nav-link" ><i class="order-navbar-icon fa fa-file-text"></i>Files</a>
+          </li>
+  </ul>
+</div>

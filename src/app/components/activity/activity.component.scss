@@ -1,0 +1,58 @@
+.activity-description{
+    color: #324857;
+    font-size: 14px;
+    display: block;
+    padding-left: 50px;
+}
+.activity-desc-two{
+    font-size: 14px;
+    color: #7B7B7B;
+    padding-left: 50px;
+}
+.activity-date-time{
+    color: #7B7B7B;
+    padding-left: 70px;
+    text-align: left;    
+    font-size: 16px;
+}
+.activity-item{
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    border-radius: 4px;
+    background: #F4F5F8;
+    cursor: pointer;
+}
+.activity-item:focus{
+    outline:none;
+}
+.activity-item.active{
+    background: #E1F5FF;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    border-radius: 4px;
+}
+.activity-image{
+    font-size: 18px;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    color: white;
+    background: #007EA7;
+    border-radius: 50%;
+    padding: 4px 6px 5px 6px;
+}
+.activity-time{
+    font-size: 10px;
+    color: #A1A1A1;
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+}
+.activity-day {
+    color: #A1A1A1;
+    font-size: 12px;
+    padding-bottom: 5px;
+    font-weight: bold;
+}
